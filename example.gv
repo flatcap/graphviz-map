@@ -1,0 +1,62 @@
+digraph example
+{
+	graph [
+		rankdir="TB"
+		nodesep="1.0"
+		ranksep="1.0"
+
+		// Default link (and tooltip) for entire graph
+		URL="https://neomutt.org/"
+		tooltip="NeoMutt"
+	]
+
+	node [
+		shape="Mrecord"
+		style="rounded,filled"
+		fillcolor="#ffff80"
+		color="#000000"
+
+		// Default link (and tooltip) for unlabelled nodes
+		URL="https://flatcap.org/"
+		tooltip="FlatCap"
+	]
+
+	edge [
+		penwidth="4.0"
+		arrowsize="1.0"
+		color="#000000"
+
+		// Default link (and tooltip) for unlabelled edges
+		URL="https://google.org/"
+		tooltip="Google"
+	]
+
+	// Link (and tooltip) on nodes
+	apple      [ URL="https://apple.com"      tooltip="Apple"      ]
+	banana     [ URL="https://banana.com"     tooltip="Banana"     ]
+	cherry     [ URL="https://cherry.com"     tooltip="Cherry"     ]
+	damson     [ URL="https://damson.com"     tooltip="Damson"     ]
+	elderberry [ URL="https://elderberry.com" tooltip="Elderberry" ]
+	fig        [ URL="https://fig.com"        tooltip="Fig"        ]
+	guava      [ URL="https://guava.com"      tooltip="Guava"      ]
+	hawthorn   [                              tooltip="Hawthorn"   ] // Tooltip only
+	ilama      [ URL="https://ilama.com"                           ] // URL only
+	jackfruit  [                                                   ] // Neither
+
+	apple      -> damson     [ URL="https://montenegro.com"  tooltip="Montenegro"  ]
+	apple      -> elderberry [ URL="https://slovenia.com"    tooltip="Slovenia"    ]
+	apple      -> guava      [ URL="https://russia.com"      tooltip="Russia"      ]
+	banana     -> damson     [ URL="https://netherlands.com" tooltip="Netherlands" ]
+	banana     -> guava      [ URL="https://albania.com"     tooltip="Albania"     ]
+	cherry     -> fig        [ URL="https://croatia.com"     tooltip="Croatia"     ]
+	cherry     -> hawthorn   [ URL="https://serbia.com"      tooltip="Serbia"      ]
+	damson     -> ilama      [ URL="https://germany.com"     tooltip="Germany"     ]
+	damson     -> jackfruit  [ URL="https://turkey.com"      tooltip="Turkey"      ]
+	elderberry -> ilama      [ URL="https://sweden.com"      tooltip="Sweden"      ]
+	elderberry -> jackfruit  [ URL="https://portugal.com"    tooltip="Portugal"    ]
+	fig        -> hawthorn   [ URL="https://spain.com"       tooltip="Spain"       ]
+	fig        -> ilama      [                               tooltip="Switzerland" ] // Tooltip only 
+	fig        -> jackfruit  [ URL="https://malta.com"                             ] // URL only     
+	ilama      -> jackfruit  [                                                     ] // Neither      
+
+}
